@@ -12,19 +12,19 @@ La estructura de este repositorio sigue prácticas recomendadas de acuerdo al pa
 
     ├── LICENSE           <- MIT License.  
     |  
-    ├── README.md         <- Main Readme file with the description of the project.  
+    ├── README.md         <- Archivo Readme principal con la descripción y resultados principales del proyecto.  
     |  
-    ├── CONTRIBUTING.md   <- Steps yo contribute to the project.  
+    ├── CONTRIBUTING.md   <- Notas sobre contribuciones al proyecto.  
     |  
-    ├── CITATION.md       <- Way to cite the project.  
+    ├── CITATION.md       <- Forma de citar el proyecto.  
     |  
-    ├── data              <- Original data bases.  
+    ├── data              <- Base de datos de origen.  
     |  
     ├── doc               <- Archivos de texto.  
     |  
-    ├── results           <- Clean and analyzes data bases.  
+    ├── results           <- Resultados del proyecto: datos procesados, gráficos, etc.  
     |  
-    └── src               <- Coding files.  
+    └── src               <- Archivos de código.  
 
 ## Resultados
 
