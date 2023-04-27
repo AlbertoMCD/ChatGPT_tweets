@@ -1,1 +1,2 @@
-Carpeta con base de datos.
+# Data
+Carpeta con base de datos a analizar.
