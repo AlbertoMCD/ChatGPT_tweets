@@ -1,6 +1,6 @@
 # Tweets sobre ChatGPT
 
-Repositorio para proyecto final de la materia Desarrollo de Proyecto II, realizado por Mauricio Arnoldo Tenoro Vargas y Alberto Martínez Lara.
+Repositorio para proyecto final de la materia Desarrollo de Proyecto II, realizado por Mauricio Arnoldo Tenorio Vargas y Alberto Martínez Lara.
 
 El objetivo del presente proyecto es analizar la opinión pública en Twitter sobre el sistema de chatbot IA ChatGPT.
 
