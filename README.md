@@ -1,8 +1,14 @@
-# Estructura de repositorio
+# Tweets sobre ChatGPT
 
-El objetivo de este repositorio es implementar las buenas prácticas de acuerdo al paper ["Good Enough Practices in Scientific Computing"](https://arxiv.org/abs/1609.00037) por Greg Wilson, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy K. Teal.
+Repositorio para proyecto final de la materia Desarrollo de Proyecto II, realizado por Mauricio Arnoldo Tenoro Vargas y Alberto Martínez Lara.
 
-La estructura que queremos que tenga este repositorio es la siguiente:
+El objetivo del presente proyecto es analizar la opinión pública en Twitter sobre el sistema de chatbot IA ChatGPT.
+
+![](https://media.giphy.com/media/SnbwVKTj0vBQSK47us/giphy.gif)
+
+Fuente: [Giphy](https://media.giphy.com/media/SnbwVKTj0vBQSK47us/giphy.gif)
+
+La estructura de este repositorio sigue prácticas recomendadas de acuerdo al paper ["Good Enough Practices in Scientific Computing"](https://arxiv.org/abs/1609.00037) por Greg Wilson, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy K. Teal.
 
     ├── LICENSE           <- MIT License.  
     |  
@@ -19,3 +25,7 @@ La estructura que queremos que tenga este repositorio es la siguiente:
     ├── results           <- Clean and analyzes data bases.  
     |  
     └── src               <- Coding files.  
+
+## Resultados
+
+En progreso ...
