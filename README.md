@@ -63,7 +63,7 @@ Para lograr el objetivo utilizamos las siguientas herramientas y librerías para
 
 Difusión en LinkedIn por [Alberto Martínez](https://www.linkedin.com/posts/alberto-mart%C3%ADnez-lara-a87528107_github-albertomcdchatgpttweets-activity-7061204479957729281-gotH?utm_source=share&utm_medium=member_desktop) y [Mauricio Tenorio](https://www.linkedin.com/posts/mauricioten_github-albertomcdchatgpttweets-activity-7061205808843272192-I3_h?utm_source=share&utm_medium=member_desktop).
 
-El detalle de resultados se puede consultar [aquí]() y el notebook con todo el procedimiento y los resultados se puede consultar [aquí](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/src/ChatGPT%20Tweets%20Analysis.ipynb). 
+El detalle de resultados se puede consultar [aquí](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/ChatGPT%20Tweets%20Analysis.md) y el notebook con todo el procedimiento y los resultados se puede consultar [aquí](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/src/ChatGPT%20Tweets%20Analysis.ipynb). 
 
 La estructura del Notebook es la siguiente:
 
