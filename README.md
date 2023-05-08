@@ -108,12 +108,12 @@ df = df.drop(['replyToSID', 'id', 'replyToUID', 'longitude', 'latitude', 'replyT
 
 ### EDA
 
-[Created Hour Bar Plot](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/CreatedHour.png)
+![Created Hour Bar Plot](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/CreatedHour.png)
 
 Aproximadamente el 90% de los tweets scrapeados fueron a las 5 de la tarde, el resto fue alrededor de las 4.
 
 
-[Source Distribution](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/statusSource.png)
+![Source Distribution](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/statusSource.png)
 
 
 ### Procesamiento de Texto
