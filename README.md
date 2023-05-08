@@ -115,6 +115,8 @@ Aproximadamente el 90% de los tweets scrapeados fueron a las 5 de la tarde, el r
 
 ![Source Distribution](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/statusSource.png)
 
+Las principales plataformas de origen de los tweets son Android, iOS y WebApp, es interesante que Android y iOS estan sumamente parejos, posiblmente no se obtenga el mismo resultado si se scrapena tweets unicamente de USA.
+
 
 ### Procesamiento de Texto
 
@@ -144,6 +146,71 @@ Par aposteriormente traducirlo con la la libreria [deep_translator](https://pypi
 Postoriormente se realizaron transofrmaciones utilizando python y librerias externas para eliminar signos de puntuacion, cambiar texto a minúsculas, tokenización, stopwords, Lematización y extracción de urls para obtener finalmente la columna text_clean con el texto 'limpio'
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/text_clean.png)
+
+
+### Análisis de sentimiento
+
+
+Para generar el analisis de sentimiento utilizamos utilizando el nuevo dataframe limpio utilizamos la siguiente funcion:
+
+```
+
+# Añadir análisis de sentimiento
+nlp.add_pipe("spacytextblob")
+
+df_sent = pd.DataFrame()
+
+for i in range(len(df_texto)):
+    doc = nlp(df_texto.iloc[i]['text_clean'])
+    idioma = df_texto.iloc[i]['idioma']
+    df_1 = pd.DataFrame({
+        "clean_tweet":doc.text,
+        "polarity":doc._.blob.polarity,
+        "subjectivity":doc._.blob.subjectivity,
+        "language":idioma
+    }, index=[0])
+    df_sent = pd.concat([df_sent, df_1])
+    
+df_sent
+```
+#### Polaridad
+De esta manera obtuvimos los siguientes graficos con las nuevas variables de Polaridad y Subjetividad:
+
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad.png)
+
+Se observa una distribucion relativamente normal, la mayor cantidad de tweets tine una polaridad Neutra.
+
+#### Subjetividad
+
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Subjetividad.png)
+
+En el caso de la subjetividad del sentimiento la distribucion se observa relativamente plana, aunque tomando en cuenta que el valor de la frecuencia no es lineal, la cantidad de tweets con muy poca subjetividad (0 - 0.10) es alta, pracaticamente 1/3 de los tweets.
+
+#### Subjetividad vs Polaridad
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad.png)
+
+El diagrama de dispersion de ambas variables muestra buena variacion entre las varialbes y cierta correlacion, entre mayor grado de Polaridad y Subjetividad.
+
+
+
+#### Distribucion de los Idiomas
+
+
+Lenguage Pie Chart
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Language.png)
+
+La mayoria de los tweets son en ingles, seguido del español.
+
+
+
+#### Nube de Palabras
+
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Nube%20de%20palabras.png)
+
+Las Palabras mas utilizadas como resultado final de nuestro analisis, otraas palabras importantes ademas de chatgpt son: AI, PROMPT, COURSE y OPENAI.
+
+
+
 
 
 
