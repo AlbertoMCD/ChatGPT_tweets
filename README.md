@@ -28,20 +28,20 @@ La estructura de este repositorio sigue prácticas recomendadas de acuerdo al pa
 
 ## Introducción
 
-ChatGPT es un modelo de de Machine Learning desarrollado por OpenAI, que utiliza la arquitectura GPT (Generative Pre-trained Transformer). Su propósito es entablar conversaciones en lenguaje natural con humanos a traez de consultas o en ingles (prompts).
+ChatGPT es un modelo de de Machine Learning desarrollado por OpenAI, que utiliza la arquitectura GPT (Generative Pre-trained Transformer). Su propósito es entablar conversaciones en lenguaje natural con humanos a través de consultas o en inglés "prompts".
 
-Como modelo de lenguaje, ChatGPT ha sido entrenado en una gran cantidad de datos de texto de Internet, lo que le permite generar matrizes de lenguaje extremadamente complejas y eficacez, logrando proveer de información al usuario de manera rapida y personalizada basandose en el modelo asi como los promts previamente enviados por el usuario, lo cual ah hecho que el modelo sea sumamente poderoso e inquietante.
+Como modelo de lenguaje, ChatGPT ha sido entrenado con una gran cantidad de datos de texto de Internet, lo que le permite generar matrizes de lenguaje extremadamente complejas y eficaces, logrando proveer de información al usuario de manera rápida y personalizada, basándose en el modelo, así como los prompts previamente enviados por el usuario, lo cual ha hecho que el modelo sea sumamente poderoso e inquietante.
 
-Dicho lo anterior, ChatGPT es una herramienta que genera entusiasmo y para lgunas personas y organizaciones, tambien preocupacion. El modelo ya se ah usado para difundir desinformaicion, obtener informacion privada prviamente alimantada por el algoritmo, uso poco etico en instituciones educativas, etc.
+Dicho lo anterior, ChatGPT es una herramienta que genera entusiasmo y para algunas personas y organizaciones, también preocupación. El modelo ya se ha usado para difundir desinformación, obtener información privada previamente alimentada por el algoritmo, uso poco ético en instituciones educativas, etc.
 
 
 ## Objetivo
 ![](https://aijn.eu/files/attachments/.113/w500h300q85_Target.png?1547139106631)
 Fuente: [Aijin](https://aijn.eu/files/attachments/.113/w500h300q85_Target.png?1547139106631)
 
-El objetivo del projeto es comprender con mayor detalle el sentimiento y la percepcion del publico en general acerca de ChatGPT, utilizando herramientas utilizadas en la materia de Desarrollo de Proyectos. 
+El objetivo del proyecto es comprender con mayor detalle el sentimiento y la percepción del público en general acerca de ChatGPT, utilizando herramientas utilizadas en la materia de Desarrollo de Proyectos II. 
 
-Para lograr el objetivo utilizamos las siguientas herramientas y librerias para el projecto.
+Para lograr el objetivo utilizamos las siguientas herramientas y librerías para el proyecto.
 
 
 ### Herramientas para el Proyecto
@@ -59,9 +59,9 @@ Para lograr el objetivo utilizamos las siguientas herramientas y librerias para 
 
 ## Resultados
 
-Los Resultados exportables se pueden descargar del siguiente [enlace](https://github.com/m5991/tecnologiaMexico/tree/main/results).
+El notebook con todo el procedimiento y los resultados se puede consultar [aquí](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/src/ChatGPT%20Tweets%20Analysis.ipynb). 
 
-Estructura del [Notebook](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/src/ChatGPT%20Tweets%20Analysis.ipynb) es la siguiente:
+La estructura del Notebook es la siguiente:
 
 1. Información del Dataset
 2. Limpieza de Datos
@@ -70,12 +70,11 @@ Estructura del [Notebook](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main
 5. Análisis de sentimiento
 
 
+### Información del Dataset
 
-### Informacion del Dataset
+Queremos agradecer a [Eduardo Ríos Luna](https://github.com/edurios2021), por ayudarnos a utilizar su cuenta activa con el API de Twitter, para obtener los 3000 tweets, utilizando la libreria Tweepy.
 
-Queremos agradecer a [Eduardo Rios](https://github.com/edurios2021), por ayudarnos a utilizar su cuenta activa con el API de twitter para asi obtener los 3000 tweets utilizando la libreria Tweepy.
-
-Las variables screapeads con Tweepy  en un intervalo de 2 horas conteniendo la palabra ChatGPT son las siguientes:
+Las variables scrapeadas con Tweepy  en un intervalo de 2 horas conteniendo la palabra ChatGPT son las siguientes:
 
 * text: Contenido del tweet.
 * favorited: Estado binario de si fue agregado como favorito el tweet
@@ -89,17 +88,17 @@ Las variables screapeads con Tweepy  en un intervalo de 2 horas conteniendo la p
 * statusSource: html source.
 * screenName: Usuario.
 * retweetCount: Numero de retweets.
-* isRetweet: Indicador de si el tweet es un Retweet o Tweet regular..
+* isRetweet: Indicador de si el tweet es un Retweet o Tweet regular.
 * retweeted: Indicador de si el tweet fue retweeteado.
-* longitude: longitud del origen del tweet.
-* latitude: latitud del origen del tweet.
+* longitude: longitud de la ubicación origen del tweet.
+* latitude: latitud de la ubicación origen del tweet.
 
 
 
 
 ### Limpieza de Datos
 
-El dataset general se eonctraba listo para en analisis, solo realizamos algunas trasformaciones y eleminamos columnas inncesarias para el analisis
+El dataset general se encontraba listo para el análisis, se realizaron pocas trasformaciones y se eliminaron columnas innecesarias para el análisis.
 
 ```
 df = df.drop(['replyToSID', 'id', 'replyToUID', 'longitude', 'latitude', 'replyToSN'], axis=1)
@@ -110,17 +109,17 @@ df = df.drop(['replyToSID', 'id', 'replyToUID', 'longitude', 'latitude', 'replyT
 
 ![Created Hour Bar Plot](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/CreatedHour.png)
 
-Aproximadamente el 90% de los tweets scrapeados fueron a las 5 de la tarde, el resto fue alrededor de las 4.
+Aproximadamente el 90% de los tweets fueron obtenidos a las 5 de la tarde, el resto fueron alrededor de las 4.
 
 
 ![Source Distribution](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/statusSource.png)
 
-Las principales plataformas de origen de los tweets son Android, iOS y WebApp, es interesante que Android y iOS estan sumamente parejos, posiblmente no se obtenga el mismo resultado si se scrapena tweets unicamente de USA.
+Las principales plataformas de origen de los tweets son Android, iOS y WebApp, es interesante observar que Android y iOS están sumamente parejos, posiblmente no se obtenga el mismo resultado si se scrapean tweets únicamente de USA.
 
 
 ### Procesamiento de Texto
 
-Debido a las restricciones del scraper, obtenemos tweets globales, por lo que obtamos por utilizar una libreria prenetrenada para detectar el lenguaje utilizando el siguiente codigo: 
+Debido a las restricciones del scraper, obtenemos tweets globales, por lo que optamos por utilizar una librería preentrenada para detectar el lenguaje utilizando el siguiente código: 
 
 
 ```
@@ -137,13 +136,13 @@ for index, row in df_texto['text'].iteritems():
 df_texto
 ```
 
-Par aposteriormente traducirlo con la la libreria [deep_translator](https://pypi.org/project/deep-translator/)
+Posteriormente, se realizó la traducción con la librería [deep_translator](https://pypi.org/project/deep-translator/).
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/translated%20tweets.png)
 
 
 
-Postoriormente se realizaron transofrmaciones utilizando python y librerias externas para eliminar signos de puntuacion, cambiar texto a minúsculas, tokenización, stopwords, Lematización y extracción de urls para obtener finalmente la columna text_clean con el texto 'limpio'
+Se realizaron transformaciones utilizando Python y librerías externas para eliminar signos de puntuación, cambiar texto a minúsculas, tokenización, stopwords, lematización y extracción de URL's para obtener finalmente la columna text_clean con el texto 'limpio'.
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/text_clean.png)
 
@@ -151,7 +150,7 @@ Postoriormente se realizaron transofrmaciones utilizando python y librerias exte
 ### Análisis de sentimiento
 
 
-Para generar el analisis de sentimiento utilizamos utilizando el nuevo dataframe limpio utilizamos la siguiente funcion:
+Para generar el análisis de sentimiento, se empleó el nuevo dataframe limpio, y se utilizaron las siguientes funciones:
 
 ```
 
@@ -173,46 +172,39 @@ for i in range(len(df_texto)):
     
 df_sent
 ```
+De esta manera obtuvimos las nuevas variables de Polaridad y Subjetividad, que indican el nivel de positividad o negatividad del comentario, así como la objetividad del mismo.
+
 #### Polaridad
-De esta manera obtuvimos los siguientes graficos con las nuevas variables de Polaridad y Subjetividad:
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad.png)
 
-Se observa una distribucion relativamente normal, la mayor cantidad de tweets tine una polaridad Neutra.
+Se observa una distribución relativamente normal, la mayor cantidad de tweets tiene una polaridad neutra cercana a cero.
 
 #### Subjetividad
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Subjetividad.png)
 
-En el caso de la subjetividad del sentimiento la distribucion se observa relativamente plana, aunque tomando en cuenta que el valor de la frecuencia no es lineal, la cantidad de tweets con muy poca subjetividad (0 - 0.10) es alta, pracaticamente 1/3 de los tweets.
+En el caso de la subjetividad, la distribución se observa relativamente plana, aunque tomando en cuenta que la escala de la frecuencia no es lineal, la cantidad de tweets con muy poca subjetividad (0 - 0.10) es alta, prácticamente una tercera parte de los tweets.
 
 #### Subjetividad vs Polaridad
-![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad.png)
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad%20vs%20Subjetividad.png)
 
-El diagrama de dispersion de ambas variables muestra buena variacion entre las varialbes y cierta correlacion, entre mayor grado de Polaridad y Subjetividad.
+El diagrama de dispersión de ambas variables muestra cierta correlacion: a mayor subjetividad, los comentarios tienden a una mayor polaridad, mientras que opiniones más 'objetivas' mantienen una polaridad cercana a cero. 
 
-
-
-#### Distribucion de los Idiomas
+Por tanto, parece que, si bien hay una discrepancia en opiniones, no existe un sesgo diferencial sobre la opinión analizada, pero sí se aprecia una mayor cantidad de opiniones en el sector positivo.
 
 
-Lenguage Pie Chart
+
+#### Distribución de los idiomas
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Language.png)
 
-La mayoria de los tweets son en ingles, seguido del español.
+La mayoría de los tweets son en inglés, por lo que provienen de países como E.U., U.K., etc. En segundo lugar, provienen de países de habla hispana (español) y en tercer lugar, provienen de japoneses.
 
 
 
-#### Nube de Palabras
+#### Nube de palabras
 
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Nube%20de%20palabras.png)
 
-Las Palabras mas utilizadas como resultado final de nuestro analisis, otraas palabras importantes ademas de chatgpt son: AI, PROMPT, COURSE y OPENAI.
-
-
-
-
-
-
-
+En este wordcloud, se muestran las palabras más utilizadas como resultado final de nuestro análisis. Además de Chatgpt, otras palabras que se destacan entre los tweets son: AI, PROMPT, COURSE y OPENAI.
