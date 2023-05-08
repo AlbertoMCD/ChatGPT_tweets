@@ -117,3 +117,34 @@ Aproximadamente el 90% de los tweets scrapeados fueron a las 5 de la tarde, el r
 
 
 ### Procesamiento de Texto
+
+Debido a las restricciones del scraper, obtenemos tweets globales, por lo que obtamos por utilizar una libreria prenetrenada para detectar el lenguaje utilizando el siguiente codigo: 
+
+
+```
+
+from langdetect import detect
+
+for index, row in df_texto['text'].iteritems():
+    try:
+        lang = detect(row) #detecting each row
+        df_texto.loc[index, 'idioma'] = lang
+    except:
+        continue
+
+df_texto
+```
+
+Par aposteriormente traducirlo con la la libreria [deep_translator](https://pypi.org/project/deep-translator/)
+
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/translated%20tweets.png)
+
+
+
+Postoriormente se realizaron transofrmaciones utilizando python y librerias externas para eliminar signos de puntuacion, cambiar texto a minúsculas, tokenización, stopwords, Lematización y extracción de urls para obtener finalmente la columna text_clean con el texto 'limpio'
+
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/text_clean.png)
+
+
+
+
