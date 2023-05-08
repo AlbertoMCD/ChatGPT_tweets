@@ -197,6 +197,7 @@ El diagrama de dispersion de ambas variables muestra buena variacion entre las v
 
 
 Lenguage Pie Chart
+
 ![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Language.png)
 
 La mayoria de los tweets son en ingles, seguido del español.
