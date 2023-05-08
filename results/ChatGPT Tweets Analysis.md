@@ -47,27 +47,6 @@ Variables:
 * latitude: latitud del origen del tweet.
 
 
-```python
-df.head()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -197,27 +176,13 @@ df.head()
 
 Distribución por 'Hour created'
     
-![png](output_18_0.png)
+![Created Hour Bar Plot](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/CreatedHour.png)
     
 Se observa que, dado que la extracción de datos se realizó en dos etapas, existen sólo dos horas de creación para los tweets extraídos.
 
 
 ### Status Source distribution
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -281,7 +246,7 @@ Se observa que, dado que la extracción de datos se realizó en dos etapas, exis
 </table>
 </div>
 
-
+![Source Distribution](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/statusSource.png)
 
 Se aprecia que las principales fuentes de tweets provienen de:
 1. Android
@@ -310,20 +275,6 @@ Al texto de cada uno de los tweets fue sometido a los siguientes pasos:
 7. Lematización
 8. Eliminación de URL's
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -394,23 +345,8 @@ Al texto de cada uno de los tweets fue sometido a los siguientes pasos:
 </div>
 
 
-
 ### Análisis de sentimiento
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -505,7 +441,7 @@ Al texto de cada uno de los tweets fue sometido a los siguientes pasos:
 </div>
     
 ## Polaridad
-![png](output_54_0.png)
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad.png)
     
 Se observa una distribución relativamente normal, la mayor cantidad de tweets tiene una polaridad neutra cercana a cero. Se aprecia  que existen una mayor cantidad de tweets con una opinión positiva.
 
@@ -513,7 +449,7 @@ Sin embargo, es posible detectar una alta cantidad de comentarios muy negativos,
 
 
 ## Subjetividad
-![png](output_55_0.png)
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Subjetividad.png)
     
 En el caso de la subjetividad, la distribución se observa relativamente plana, aunque tomando en cuenta que la escala de la frecuencia no es lineal, la cantidad de tweets con muy poca subjetividad (0 - 0.10) es alta, prácticamente una tercera parte de los tweets.
 
@@ -521,7 +457,7 @@ Es importante mencionar que, a pesar de lo anterior, sí existe un alto porcenta
 
 
 ## Gráfico de dispersión entre polaridad y subjetividad 
-![png](output_56_0.png)
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Polaridad%20vs%20Subjetividad.png)
     
 El diagrama de dispersión de ambas variables muestra cierta correlacion: a mayor subjetividad, los comentarios tienden a una mayor polaridad, mientras que opiniones más 'objetivas' mantienen una polaridad cercana a cero. 
 
@@ -529,22 +465,8 @@ Por tanto, parece que, si bien hay una discrepancia en opiniones, no existe un s
 
 Claramente la opinión general tiene una perspectiva clara y neutra sobre esta aplicación, o contiene sólo noticias al respecto. Pero sí es posible apreciar opinión dividida y muy polarizada del tema, como ya se comentó previamente.
 
-## Idiomas
+## Distribución de los idiomas
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -622,17 +544,14 @@ Principales idiomas:
 9. Árabe: 28
 10. Albanés: 23
 
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Language.png)
+
 Lo anterior muestra una gran participación por los países habla inglesa, casi en un 60%, lo que denota un mayor conocimiento e implicaciones para estos países, pero también existen muchos países de habla hispana y principalmente Japón que contribuyen con opiniones.
-
-    
-![png](output_60_0.png)
-    
-
 
 
 ### Nube de palabras
     
-![png](output_62_1.png)
+![](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/Nube%20de%20palabras.png)
     
 En este wordcloud, se muestran las palabras más utilizadas como resultado final de nuestro análisis. Además de Chatgpt, otras palabras que se destacan entre los tweets son: AI, PROMPT, COURSE y OPENAI.
 
