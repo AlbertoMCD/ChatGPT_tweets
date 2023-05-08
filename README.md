@@ -95,6 +95,8 @@ Las variables screapeads con Tweepy  en un intervalo de 2 horas conteniendo la p
 * latitude: latitud del origen del tweet.
 
 
+
+
 ### Limpieza de Datos
 
 El dataset general se eonctraba listo para en analisis, solo realizamos algunas trasformaciones y eleminamos columnas inncesarias para el analisis
@@ -104,3 +106,14 @@ df = df.drop(['replyToSID', 'id', 'replyToUID', 'longitude', 'latitude', 'replyT
 ```
 
 
+### EDA
+
+[Created Hour Bar Plot](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/CreatedHour.png)
+
+Aproximadamente el 90% de los tweets scrapeados fueron a las 5 de la tarde, el resto fue alrededor de las 4.
+
+
+[Source Distribution](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/results/statusSource.png)
+
+
+### Procesamiento de Texto
