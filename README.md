@@ -55,9 +55,13 @@ Para lograr el objetivo utilizamos las siguientas herramientas y librerías para
 * [Altair](https://altair-viz.github.io/)
 * [Scipy](https://scipy.org/)
 * [nltk](https://www.nltk.org/)
+* [spacy](https://spacy.io)
+* [wordcloud](https://pypi.org/project/wordcloud/)
 
 
 ## Resultados
+
+Difusión en LinkedIn por [Alberto Martínez](https://www.linkedin.com/posts/alberto-mart%C3%ADnez-lara-a87528107_github-albertomcdchatgpttweets-activity-7061204479957729281-gotH?utm_source=share&utm_medium=member_desktop) y [Mauricio Tenorio](https://www.linkedin.com/posts/mauricioten_github-albertomcdchatgpttweets-activity-7061205808843272192-I3_h?utm_source=share&utm_medium=member_desktop).
 
 El notebook con todo el procedimiento y los resultados se puede consultar [aquí](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/src/ChatGPT%20Tweets%20Analysis.ipynb). 
 
