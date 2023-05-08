@@ -47,7 +47,7 @@ Para lograr el objetivo utilizamos las siguientas herramientas y librerias para 
 ### Herramientas para el Proyecto
 
 **Lenguaje/Plataforma**
-* Jupyter Notebooks
+* [Jupyter Notebooks](https://jupyter.org/)
 
 **Librerías**
 * [Numpy](https://numpy.org/)
@@ -57,5 +57,50 @@ Para lograr el objetivo utilizamos las siguientas herramientas y librerias para 
 * [nltk](https://www.nltk.org/)
 
 
+## Resultados
+
+Los Resultados exportables se pueden descargar del siguiente [enlace](https://github.com/m5991/tecnologiaMexico/tree/main/results).
+
+Estructura del [Notebook](https://github.com/AlbertoMCD/ChatGPT_tweets/blob/main/src/ChatGPT%20Tweets%20Analysis.ipynb) es la siguiente:
+
+1. Información del Dataset
+2. Limpieza de Datos
+3. EDA
+4. Procesamiento de texto
+5. Análisis de sentimiento
+
+
+
+### Informacion del Dataset
+
+Queremos agradecer a [Eduardo Rios](https://github.com/edurios2021), por ayudarnos a utilizar su cuenta activa con el API de twitter para asi obtener los 3000 tweets utilizando la libreria Tweepy.
+
+Las variables screapeads con Tweepy  en un intervalo de 2 horas conteniendo la palabra ChatGPT son las siguientes:
+
+* text: Contenido del tweet.
+* favorited: Estado binario de si fue agregado como favorito el tweet
+* favoriteCount: Conteo de veces que el tweet fue marcado con favorito por otro usuario.
+* replyToSN: Contenido del tweet.
+* created: Fecha, hora y minuto de creación del tweet.
+* truncated: Indicador de si el Tweet fue truncado al momento de obtenerlo con el API.
+* replyToSID: NA
+* id: Identificador del tweet.
+* replyToUID: NA
+* statusSource: html source.
+* screenName: Usuario.
+* retweetCount: Numero de retweets.
+* isRetweet: Indicador de si el tweet es un Retweet o Tweet regular..
+* retweeted: Indicador de si el tweet fue retweeteado.
+* longitude: longitud del origen del tweet.
+* latitude: latitud del origen del tweet.
+
+
+### Limpieza de Datos
+
+El dataset general se eonctraba listo para en analisis, solo realizamos algunas trasformaciones y eleminamos columnas inncesarias para el analisis
+
+'''
+df = df.drop(['replyToSID', 'id', 'replyToUID', 'longitude', 'latitude', 'replyToSN'], axis=1)
+'''
 
 
