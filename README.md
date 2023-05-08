@@ -99,8 +99,8 @@ Las variables screapeads con Tweepy  en un intervalo de 2 horas conteniendo la p
 
 El dataset general se eonctraba listo para en analisis, solo realizamos algunas trasformaciones y eleminamos columnas inncesarias para el analisis
 
-'''
+```
 df = df.drop(['replyToSID', 'id', 'replyToUID', 'longitude', 'latitude', 'replyToSN'], axis=1)
-'''
+```
 
 
